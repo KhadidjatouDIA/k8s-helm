@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: stock-ms
+  name: {{ .Release.Name }}
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: stock-ms
+  template:
+    metadata:
+      labels:
+        app: stock-ms
+    spec:
+      containers:
+        - image: {{ .Values.image.repository }}
+          imagePullPolicy: {{ .Values.image.pullPolicy }}
+          name: stock-ms
+          ports:
+            - containerPort: 8080
+      imagePullSecrets:
+        - name: my-secret

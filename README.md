@@ -24,16 +24,17 @@ Il suit ces étapes :
 ---
 
 ## ✅ Quels sont les avantages ?
-Automatisation complète :
+- Automatisation complète :
 👉 Dès qu’un développeur pousse une modification sur GitLab, tout le pipeline (build → test → déploiement) se fait sans intervention manuelle.
 
-Facilite la gestion des configurations :
+- Facilite la gestion des configurations :
 👉 Avec Helm, au lieu de modifier plusieurs fichiers YAML compliqués, on change juste quelques paramètres dans un fichier values.yaml.
 
-Scalabilité et mises à jour simplifiées :
+- Scalabilité et mises à jour simplifiées :
 👉 Helm permet de mettre à jour une application facilement (upgrade) et de revenir en arrière (rollback) en un clic.
 👉 Kubernetes gère la scalabilité, donc si ton appli doit gérer plus d’utilisateurs, Helm permet d’augmenter le nombre de copies (réplicas) sans effort.
----
+
+----
 ## 🔥 Allez, un exemple concret ! Let's go 🚀
 Imaginons que vous développiez une API de gestion de stock et que vous vouliez la déployer sur Kubernetes.
 
