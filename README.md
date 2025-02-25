@@ -138,22 +138,22 @@ vers notre image stocké dans le registry
 kubectl create secret docker-registry my-secret --dockerserver=<your-registry-server> --docker-username=<your-name> --
 docker-password=<your-pword> --docker-email=<your-email>
  ```
- votre secret sera créé.
-8. Lancez la commande pour visualiser en format .yaml les informations du secret. 
+ votre secret sera créé. <br>
+9. Lancez la commande pour visualiser en format .yaml les informations du secret. 
  ```sh 
 kubectl get secrets my-secret -o yaml
  ```
  ![alt text](image-45.png)
 - Vous pouvez le copier et le mettre dans notre fichier secret.yaml.
 ![alt text](image-46.png)
-9. Et pour lancer les deploiements, on lance cette commande:
+10. Et pour lancer les deploiements, on lance cette commande:
 ![alt text](image-47.png)
-10. Visualiser le déploiement qui a été un succès
+11. Visualiser le déploiement qui a été un succès
 ![alt text](image-48.png)
 ![alt text](image-49.png)
 ![alt text](image-50.png)
 ![alt text](image-51.png)
-11. Vous pouvez voir les déploiements du namespace par défaut en ligne de commande en lançant les commandes ci-dessous :
+12. Vous pouvez voir les déploiements du namespace par défaut en ligne de commande en lançant les commandes ci-dessous :
 - Cette commande vous permet d'afficher la liste des déploiements (Deployments) actifs dans le cluster Kubernetes :
 ```sh
     kubectl get deploy
@@ -162,7 +162,7 @@ kubectl get secrets my-secret -o yaml
  ```sh
     kubectl get services
 ```
-12. Ensuite, vous allez exposer le service pour pouvoir le tester et obtenir l'URL d'accès au service `helm-stock-ms` exposé par Minikube. Utilisez la commande suivante :
+13. Ensuite, vous allez exposer le service pour pouvoir le tester et obtenir l'URL d'accès au service `helm-stock-ms` exposé par Minikube. Utilisez la commande suivante :
 
  ```sh
     minikube service helm-stock-ms --url
